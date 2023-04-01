@@ -1,0 +1,13 @@
+mixin nav(options = {})
+  nav.main-nav(class = options.nav)&attributes(attributes)
+    ul.main-nav__list(class = options.list)
+      li.main-nav__item(class = options.item)
+        a.main-nav__link(href = "#") Услуги
+      li.main-nav__item(class = options.item)
+        a.main-nav__link(href = "#") Виджеты
+      li.main-nav__item(class = options.item)
+        a.main-nav__link(href = "#") Интеграции
+      li.main-nav__item(class = options.item)
+        a.main-nav__link(href = "#") Кейсы
+      li.main-nav__item(class = options.item)
+        a.main-nav__link(href = "#") Сертификаты

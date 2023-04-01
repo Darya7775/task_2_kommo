@@ -1,0 +1,198 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &.focus-visible:active {
+    @content;
+  }
+}
+
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+// Desktop first
+
+@mixin vp-2599 {
+  @media (max-width: ($vp-2600 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-2399 {
+  @media (max-width: ($vp-2400 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-2099 {
+  @media (max-width: ($vp-2100 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1919 {
+  @media (max-width: ($vp-1920 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1759 {
+  @media (max-width: ($vp-1760 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1599 {
+  @media (max-width: ($vp-1600 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1439 {
+  @media (max-width: ($vp-1440 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1366 {
+  @media (max-width: ($vp-1366 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1279 {
+  @media (max-width: ($vp-1280 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1159 {
+  @media (max-width: ($vp-1160 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-1023 {
+  @media (max-width: ($vp-1024 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-939 {
+  @media (max-width: ($vp-940 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-549 {
+  @media (max-width: ($vp-550 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-374 {
+  @media (max-width: ($vp-375 - 0.06em)) {
+    @content;
+  }
+}
+
+@mixin vp-320 {
+  @media (max-width: ($vp-320 - 0.06em)) {
+    @content;
+  }
+}
+
+// Fonts
+
+@mixin Montserrat300 {
+  font-family: $ff-montserrat;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin Montserrat400 {
+  font-family: $ff-montserrat;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin Inter400 {
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin Inter500 {
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin Inter700 {
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin Inter900 {
+  font-family: $ff-inter;
+  font-style: normal;
+  font-weight: 900;
+}
+
+// Background
+
+@mixin Background {
+  background-image: url("../img/bg.png");
+  background-color: $color-black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+
+  @include vp-1439 {
+    @include retina {
+      background-image: url("../img/bg@2x.png");
+    }
+
+    @include retina {
+      background-image: url("../img/bg@2x.webp");
+    }
+  }
+
+  @include vp-767 {
+    background-image: none;
+  }
+}

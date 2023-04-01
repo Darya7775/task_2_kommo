@@ -1,0 +1,47 @@
+doctype html
+
+include ../components
+
+block variables
+
+html(lang="ru")
+  head
+    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(name='description', content='task 2')
+
+    link(rel='preload', href='fonts/Montserrat-Regular.woff', as='font')
+    link(rel='preload', href='fonts/Montserrat-Regular.woff2', as='font')
+    link(rel='preload', href='fonts/Montserrat-Light.woff', as='font')
+    link(rel='preload', href='fonts/Montserrat-Light.woff2', as='font')
+    link(rel='preload', href='fonts/Inter-Regular.woff', as='font')
+    link(rel='preload', href='fonts/Inter-Regular.woff2', as='font')
+    link(rel='preload', href='fonts/Inter-Medium.woff', as='font')
+    link(rel='preload', href='fonts/Inter-Medium.woff2', as='font')
+    link(rel='preload', href='fonts/Inter-Bold.woff', as='font')
+    link(rel='preload', href='fonts/Inter-Bold.woff2', as='font')
+    link(rel='preload', href='fonts/Inter-Black.woff', as='font')
+    link(rel='preload', href='fonts/Inter-Black.woff2', as='font')
+
+    link(rel='stylesheet', href='css/style.min.css')
+
+  body
+    h1.visually-hidden Welbex крупный интегратор CRM
+    +sprite()
+    .wrapper(class=wrapperMods)
+      if (hasHeader)
+        +header(headerMods)
+
+      block main
+
+      if (hasFooter)
+        +footer(footerMods)
+
+    block modals
+
+    script(src="js/vendor.min.js")
+    script(src="js/main.min.js")
+    if pageJs
+      script(src=pageJs)

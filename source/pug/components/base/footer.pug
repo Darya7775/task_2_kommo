@@ -1,0 +1,46 @@
+mixin footer(footerMods)
+  footer.footer
+    .container(class=footerMods)
+      .footer__wrapper
+        h3 О компании
+        ul.footer__list.footer__list--company
+          li.footer__item
+            a.footer__link(href = "#") Партнёрская программа
+          li.footer__item
+            a.footer__link(href = "#") Вакансии
+      .footer__wrapper
+        h3 Меню
+        ul.footer__list.footer__list--menu
+          li.footer__item
+            a.footer__link(href = "#") Расчёт стоимости
+          li.footer__item
+            a.footer__link(href = "#") Благодарственные письма
+          li.footer__item
+            a.footer__link(href = "#") Услуги
+          li.footer__item
+            a.footer__link(href = "#") Кейсы
+          li.footer__item
+            a.footer__link(href = "#") Виджеты
+          li.footer__item
+            a.footer__link(href = "#") Сертификаты
+          li.footer__item
+            a.footer__link(href = "#") Интеграции
+          li.footer__item
+            a.footer__link(href = "#") Блог на Youtube
+          li.footer__item
+            a.footer__link(href = "#") Наши клиенты
+          li.footer__item
+            a.footer__link(href = "#") Вопрос / Ответ
+      .footer__wrapper.footer__wrapper--contacts
+        h3 Контакты
+        .footer__wrap-tel
+          a.footer__tel(href = "tel:+75555555555") +7 555 555-55-55
+        +social({
+          telegram: {width: 17, height: 14},
+          viber: {width: 16, height: 15},
+          whatsapp: {width: 16, height: 16},
+        }).footer__social
+        address.footer__address Москва, Путевой проезд 3с1, к 902
+      .footer__wrap-copyright
+        span.footer__copyright ©WELBEX 2022. Все права защищены.
+        a.footer__link-copyright(href = "#") Политика конфиденциальности

@@ -1,0 +1,16 @@
+mixin header(headerMods)
+  header.header
+    .container(class=headerMods)
+      .header__wrap-logo
+        +logo().header__logo
+        span.header__logo-text крупный интегратор CRM <br /> в Росcии и ещё 8 странах
+      +nav({
+        nav: "header__nav",
+      })
+      .header__wrap-tel
+        a.header__tel(href = "tel:+75555555555") +7 555 555-55-55
+      +social({
+        telegram: {width: 20, height: 20},
+        viber: {width: 20, height: 19},
+        whatsapp: {width: 20, height: 20},
+      }).header__social
